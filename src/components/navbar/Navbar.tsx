@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Logo } from "../logo/Logo";
+import { Link } from "react-router-dom";
 
 const NavbarContainer = styled.header`
   background: white;
@@ -21,7 +22,10 @@ export const Navbar = () => (
       <Logo />
     </div>
     <nav className="flex items-center space-x-1 text-sm font-medium text-gray-800">
-      <button className="rounded px-3 py-2 text-white transition">asd</button>
+      <Link to="/">Inicio</Link>
+      <Link to="/productos">Productos</Link>
+      <Link to="/contacto">Contacto</Link>
+      <Link to="/ayuda">Ayuda</Link>
     </nav>
   </NavbarContainer>
 );
