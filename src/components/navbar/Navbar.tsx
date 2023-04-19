@@ -16,16 +16,25 @@ const NavbarContainer = styled.header`
   }
 `;
 
+const CustomLink = styled(Link)`
+  padding-right: 20px;
+  font-size: 1rem;
+  transition: 1s;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 export const Navbar = () => (
   <NavbarContainer className="sm:px-12 mx-auto flex items-center justify-between p-4 fixed">
     <div className="flex items-center space-x-2">
       <Logo />
     </div>
     <nav className="flex items-center space-x-1 text-sm font-medium text-gray-800">
-      <Link to="/">Inicio</Link>
-      <Link to="/productos">Productos</Link>
-      <Link to="/contacto">Contacto</Link>
-      <Link to="/ayuda">Ayuda</Link>
+      <CustomLink to="/">Inicio</CustomLink>
+      <CustomLink to="/productos">Productos</CustomLink>
+      <CustomLink to="/contacto">Contacto</CustomLink>
+      <CustomLink to="/ayuda">Ayuda</CustomLink>
     </nav>
   </NavbarContainer>
 );

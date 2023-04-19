@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Product } from "../../models/Product";
 
-const ProductListContainer = styled.div`
+const ShowcaseContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -23,7 +23,7 @@ const ProductOverlay = styled.div`
   opacity: 0;
   display: flex;
   background: #000000a3;
-  transition: .4s;
+  transition: 0.4s;
   &:hover {
     opacity: 1;
   }
@@ -36,20 +36,22 @@ const ProductImage = styled.img`
   object-fit: cover;
 `;
 
-type ProductListProps = {
+type ShowcaseProps = {
   products: Product[];
 };
-export const ProductList = ({ products }: ProductListProps) => (
-  <ProductListContainer>
-    {products.map((p: Product) => {
-      return (
-        <ProductImageContainer>
-          <ProductOverlay>
-            <ProductText>{p.name}</ProductText>
-          </ProductOverlay>
-          <ProductImage src={p.image} />
-        </ProductImageContainer>
-      );
-    })}
-  </ProductListContainer>
-);
+export const Showcase = ({ products }: ShowcaseProps) => {
+  return (
+    <ShowcaseContainer>
+      {products.map((p: Product) => {
+        return (
+          <ProductImageContainer key={p.name + p.description}>
+            <ProductOverlay>
+              <ProductText>{p.name}</ProductText>
+            </ProductOverlay>
+            <ProductImage src={p.image} />
+          </ProductImageContainer>
+        );
+      })}
+    </ShowcaseContainer>
+  );
+};

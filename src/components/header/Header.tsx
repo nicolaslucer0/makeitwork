@@ -1,6 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import slide1 from "./../../assets/carousel/1.jpg";
+import slide5 from "./../../assets/carousel/5.webp";
+import slide2 from "./../../assets/carousel/2.jpeg";
+import slide3 from "./../../assets/carousel/3.jpeg";
+import slide4 from "./../../assets/carousel/4.jpeg";
 import styled from "styled-components";
 import "swiper/css";
 
@@ -14,22 +18,24 @@ const SliderImage = styled.img`
   width: 100%;
   object-fit: cover;
 `;
-type HeaderProps = {
-  images: string[];
+
+export const Header = () => {
+  const images = [slide5, slide1, slide2, slide3, slide4];
+
+  return (
+    <HeaderContainer>
+      <Swiper
+        spaceBetween={0}
+        slidesPerView={1}
+        onSlideChange={() => console.log("slide change")}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        {images.map((image) => (
+          <SwiperSlide key={`image-${image}`}>
+            <SliderImage src={image} alt="asd" />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </HeaderContainer>
+  );
 };
-export const Header = ({ images }: HeaderProps) => (
-  <HeaderContainer>
-    <Swiper
-      spaceBetween={0}
-      slidesPerView={1}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      {images.map((image) => (
-        <SwiperSlide key={`image-${image}`}>
-          <SliderImage src={image} alt="asd" />
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </HeaderContainer>
-);
