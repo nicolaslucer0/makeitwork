@@ -1,32 +1,14 @@
 import { useEffect, useState } from "react";
 import "swiper/css";
 
-import styled, { keyframes } from "styled-components";
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
-
-const gradient = keyframes`
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-`;
+import styled from "styled-components";
+import { fadeIn, gradient } from "../../styles/styles";
 
 const MainScreenContainer = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -42,21 +24,25 @@ const Title = styled.h1`
   position: relative;
   z-index: 2;
   animation: ${fadeIn} 1s ease-in-out;
-  width: 50%;
-  line-height: 1em;
+
+  line-height: 1.2em;
   font-weight: bolder;
+
+  @media (max-width: 767px) {
+    font-size: 3em;
+  }
 `;
 
 export const Header = () => {
   const [index, setIndex] = useState(0);
-  const [word, setWord] = useState("digital");
+
   const words = Object.freeze([
-    "innovative",
-    "cutting-edge",
-    "transformative",
-    "exceptional",
-    "revolutionary",
-    "digital",
+    { text: "innovative", color: "#2196f3" },
+    { text: "cutting-edge", color: "#00bcd4" },
+    { text: "transformative", color: "#9c27b0" },
+    { text: "exceptional", color: "#009688" },
+    { text: "revolutionary", color: "#e91e63" },
+    { text: "digital", color: "#ff5722" },
   ]);
 
   useEffect(() => {
@@ -64,18 +50,23 @@ export const Header = () => {
       let a = index;
       if (a >= words.length - 1) setIndex(0);
       else setIndex(++a);
-      setWord(words[index]);
-    }, 700);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, [index, words]);
   return (
     <MainScreenContainer>
-      <Title>
-        We deliver <br></br>
-        {word}
-        <br></br> experiences.
+      <Title>We deliver</Title>
+      <Title
+        style={{
+          color: words[index].color,
+          fontFamily: "sans-serif",
+          textShadow: `${words[index].color} 0px 0px 150px`,
+        }}
+      >
+        {words[index].text}
       </Title>
+      <Title>experiences.</Title>
     </MainScreenContainer>
   );
 };

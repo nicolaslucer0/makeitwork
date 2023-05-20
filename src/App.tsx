@@ -5,11 +5,13 @@ import { Contact } from "./pages/contact/Contact";
 import ErrorPage from "./pages/error/Error";
 import { Help } from "./pages/help/Help";
 import { Landing } from "./pages/landing/Landing";
+import { Logo } from "./components/logo/Logo";
 
 function App() {
   return (
     <>
       <FullscreenMenu />
+      <Logo />
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="ayuda" element={<Help />} />
