@@ -3,7 +3,7 @@ import { Logo } from "../logo/Logo";
 import { Link } from "react-router-dom";
 
 const NavbarContainer = styled.header`
-  background: white;
+  background: transparent;
   position: sticky;
   max-width: 100%;
   margin: 0 auto;

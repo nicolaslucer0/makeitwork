@@ -1,10 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import slide1 from "./../../assets/carousel/1.jpg";
-import slide5 from "./../../assets/carousel/5.webp";
-import slide2 from "./../../assets/carousel/2.jpeg";
-import slide3 from "./../../assets/carousel/3.jpeg";
-import slide4 from "./../../assets/carousel/4.jpeg";
+import slide1 from "./../../../assets/carousel/1.jpg";
+import slide5 from "./../../../assets/carousel/5.webp";
+import slide2 from "./../../../assets/carousel/2.jpeg";
+import slide3 from "./../../../assets/carousel/3.jpeg";
+import slide4 from "./../../../assets/carousel/4.jpeg";
 import styled from "styled-components";
 import "swiper/css";
 
