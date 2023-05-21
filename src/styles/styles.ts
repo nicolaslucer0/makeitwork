@@ -23,7 +23,7 @@ export const gradient = keyframes`
 
 export const Title = styled.h1`
   font-size: 4em;
-  font-family: lato-bold;
+  font-family: helvetica-bold;
   color: black;
   position: relative;
   z-index: 2;
@@ -36,12 +36,10 @@ export const Title = styled.h1`
     font-size: 3em;
   }
 `;
-
-
 
 export const Subtitle = styled.h1`
   font-size: 2em;
-  font-family: lato-bold;
+  font-family: helvetica-bold;
   color: black;
   position: relative;
   z-index: 2;
@@ -54,3 +52,11 @@ export const Subtitle = styled.h1`
     font-size: 3em;
   }
 `;
+
+export const blue = "#2196f3";
+export const lgreen = "#00bcd4";
+export const violet = "#9c27b0";
+export const green = "#009688";
+export const red = "#e91e63";
+export const orange = "#ff5722";
+export const background = "#fff4f4;";

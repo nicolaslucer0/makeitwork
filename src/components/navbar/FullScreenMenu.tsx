@@ -84,7 +84,7 @@ const MenuList = styled.div`
   text-align: center;
 `;
 const MenuItem = styled.div`
-  font-family: lato-bold;
+  font-family: helvetica-bold;
   font-size: 2em;
 `;
 

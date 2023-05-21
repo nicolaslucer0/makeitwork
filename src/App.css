@@ -1,35 +1,35 @@
 @font-face {
-  font-family: lato;
-  src: url("./assets/fonts/Lato/lato.ttf") format("ttf"),
-    url("./assets/fonts/Lato/lato.ttf") format("ttf");
+  font-family: helvetica;
+  src: url("./assets/fonts/helvetica/HelveticaNowDisplay-Regular.ttf") format("ttf"),
+    url("./assets/fonts/helvetica/HelveticaNowDisplay-Regular.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: lato-thin;
-  src: url("./assets/fonts/Lato/latothin.ttf") format("ttf"),
-    url("./assets/fonts/Lato/latothin.ttf") format("ttf");
+  font-family: helvetica-thin;
+  src: url("./assets/fonts/helvetica/HelveticaNowDisplay-Thin.ttf") format("ttf"),
+    url("./assets/fonts/helvetica/HelveticaNowDisplay-Thin.ttf") format("ttf");
   font-weight: 400;
   font-style: thin;
 }
 
 @font-face {
-  font-family: lato-bold;
-  src: url("./assets/fonts/Lato/latoblack.ttf") format("ttf"),
-    url("./assets/fonts/Lato/latoblack.ttf") format("ttf");
+  font-family: helvetica-bold;
+  src: url("./assets/fonts/helvetica/black.ttf") format("ttf"),
+    url("./assets/fonts/helvetica/black.ttf") format("ttf");
   font-weight: 400;
   font-style: bold;
 }
 
 @font-face {
-  font-family: lato-light;
-  src: url("./assets/fonts/Lato/latolight.ttf") format("ttf"),
-    url("./assets/fonts/Lato/latolight.ttf") format("ttf");
+  font-family: helvetica-light;
+  src: url("./assets/fonts/helvetica/HelveticaNowDisplay-Light.ttf") format("ttf"),
+    url("./assets/fonts/helvetica/HelveticaNowDisplay-Light.ttf") format("ttf");
   font-weight: 400;
   font-style: bold;
 }
 
 * {
-  font-family: lato, -apple-system, BlinkMacSystemFont;
+  font-family: helvetica, -apple-system, BlinkMacSystemFont;
 }

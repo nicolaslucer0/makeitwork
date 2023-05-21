@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "swiper/css";
 
 import styled from "styled-components";
-import { fadeIn, gradient } from "../../styles/styles";
+import { background, fadeIn, gradient } from "../../styles/styles";
 
 const MainScreenContainer = styled.div`
   height: 100vh;
@@ -12,14 +12,14 @@ const MainScreenContainer = styled.div`
   align-items: center;
   text-align: center;
   justify-content: center;
-  background: linear-gradient(-45deg, #cecaff, #fff4f4, #fff4f4, #9df5ff);
-  background-size: 400% 400%;
+  background: ${background};
+  background-size: 200% 200%;
   animation: ${gradient} 10s ease infinite;
 `;
 
 const Title = styled.h1`
   font-size: 4em;
-  font-family: lato-bold;
+  font-family: helvetica-bold;
   color: black;
   position: relative;
   z-index: 2;
