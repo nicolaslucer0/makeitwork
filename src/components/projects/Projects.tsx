@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import "swiper/css";
-import { Subtitle, Title, background, blue, violet } from "../../styles/styles";
+import { Subtitle, Title, blue, violet } from "../../styles/styles";
 import federal from "./../../assets/carousel/federal.gif";
 
 const Container = styled.div`
@@ -12,7 +12,7 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
-  background: ${background};
+  background: linear-gradient(0, white, #fff4f4);
 `;
 
 const ProjectContainer = styled.div`
@@ -41,14 +41,10 @@ const ProjectDescription = styled.div`
 const Text = styled.div`
   padding: 2em;
   margin: auto;
-  background: white;
   border-radius: 10px;
   font-size: 1.4rem;
   font-family: helvetica-light, sans-serif;
-  transition: .4s;
-  &:hover {
-    box-shadow: 0 0 7px 0px #cbcbcb;
-  }
+  transition: 0.4s;
 `;
 
 const ColoredText = styled.div`
@@ -68,9 +64,8 @@ export const Projects = () => {
           <Text>
             <ColoredText>Sign up form</ColoredText>
             <Subtitle>Federal Gaming</Subtitle>
-            Formulario de inscripción para un torneo de e-sports, que cuenta con
-            un administrador para descargar la lista de participantes en formato
-            excel.
+            Registration form for an e-sports tournament, which includes an
+            administrator to download the participant list in Excel format.
           </Text>
         </ProjectDescription>
         <Image alt="federal" src={federal} />
