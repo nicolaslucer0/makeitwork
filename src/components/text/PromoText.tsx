@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
+import rocket from "./../../assets/rocket.svg";
 
 const Container = styled.div`
   position: relative;
@@ -12,15 +13,26 @@ const Container = styled.div`
   color: black;
   font-size: 4em;
   font-weight: 800;
+  padding: 3em;
+`;
+
+const Image = styled.img`
+  width: 20%;
+  margin-left: 1em;
+`;
+
+const StyledScrollAnimation = styled(ScrollAnimation)`
+  display: flex;
 `;
 
 export const PromoText = () => {
   return (
     <Container>
-      <ScrollAnimation animateIn="fadeIn" duration={2} delay={2}>
+      <StyledScrollAnimation animateIn="fadeIn" duration={2} delay={1}>
         We take your business to the next level with tailor-made programming
         solutions.
-      </ScrollAnimation>
+        <Image src={rocket} />
+      </StyledScrollAnimation>
     </Container>
   );
 };

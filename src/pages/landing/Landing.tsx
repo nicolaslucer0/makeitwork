@@ -1,3 +1,4 @@
+import { ContactForm } from "../../components/contact/ContactForm";
 import { Footer } from "../../components/footer/Footer";
 import { Header } from "../../components/header/Header";
 import { Projects } from "../../components/projects/Projects";
@@ -9,6 +10,7 @@ export const Landing = () => {
       <Header />
       <Projects />
       <PromoText />
+      <ContactForm />
       <Footer />
     </>
   );
